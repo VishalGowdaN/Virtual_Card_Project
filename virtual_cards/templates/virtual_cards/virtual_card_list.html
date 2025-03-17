@@ -1,0 +1,7 @@
+<h2>Virtual Cards</h2>
+<a href="{% url 'create_virtual_card' %}">Create Virtual Card</a>
+<ul>
+    {% for card in cards %}
+    <li>{{ card.card_number }} - Exp: {{ card.expiration_date }}</li>
+    {% endfor %}
+</ul>

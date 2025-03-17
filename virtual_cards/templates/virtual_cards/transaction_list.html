@@ -1,0 +1,7 @@
+<h2>Transactions</h2>
+<a href="{% url 'make_payment' %}">Make Payment</a>
+<ul>
+    {% for transaction in transactions %}
+    <li>{{ transaction.amount_paid }} - {{ transaction.transaction_date }}</li>
+    {% endfor %}
+</ul>

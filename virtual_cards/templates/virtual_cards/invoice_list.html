@@ -1,0 +1,7 @@
+<h2>Invoices</h2>
+<a href="{% url 'create_invoice' %}">Create Invoice</a>
+<ul>
+    {% for invoice in invoices %}
+    <li>{{ invoice.invoice_number }} - {{ invoice.amount }} - {{ invoice.status }}</li>
+    {% endfor %}
+</ul>
